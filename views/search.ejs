@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="/app.css">
+    <style>
+        #change {
+            background-color: unset;
+        }
+    </style>
+</head>
+<body>
+    <section id="nav">
+        <div>
+            <form id="searchBar" action="/search" method="post">
+                <input type="text" name="search" placeholder="Search" id="search">
+                <button><img src="search.png" alt=""></button>
+            </form>
+        </div>
+        <div id="options">
+            <span><a href="/">Home</a></span>
+            <span><a href="/update">Update</a></span>
+            <span><a href="/delete">Delete</a></span>
+            <span><a href="/view">View</a></span>
+        </div>
+    </section>
+
+    <div id="container">
+        <div>
+            <div id="change" class=".lol">
+                <% if (dataWithAge.length > 0) { %>
+                    <% dataWithAge.forEach(person => { %>
+                        <div id="info">
+                            Name: <%= person.name %> <br>
+                            Birthday: <%= person.birthdate %> <br>
+                            Age: <%= person.age %> <br> <br>
+                        </div>
+                    <% }); %>
+                <% } else { %>
+                    <span><img src="noresult.png" alt="No result found"></span>
+                    <div id="error">Can't find anything on that</div>
+                <% } %>
+            </div>
+        </div>
+
+        <div>
+            <form action="/" method="post">
+                <div id="add_box">
+                    <div id="title">
+                        <p>Add new Birthday</p>
+                    </div>
+                    <div>
+                        <label for="name">Enter Name</label>
+                    </div>
+                    <div>
+                        <input id="name" name="name" placeholder="name" type="text" required>
+                    </div> 
+                    <div>
+                        <label for="date">Enter Birthday</label>
+                    </div>
+                    <div>
+                        <input id="date" name="date" type="date" required>
+                    </div>
+                    <div>
+                        <button>Save</button>
+                    </div> 
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

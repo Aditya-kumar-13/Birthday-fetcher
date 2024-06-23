@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+<div id></div>
+    <section id="nav">
+        <div>
+            <form id="searchBar" action="/search" method="post">
+                <input type="text" name="search" placeholder="Search" id="search">
+                <button><img src="search.png" alt=""></button>
+            </form>
+        </div>
+        <div id="options">
+            <span><a href="/">Home</a></span>
+            <span><a href="/update">Update</a></span>
+            <span><a href="/delete">Delete</a></span>
+            <span><a href="/view">View</a></span>
+        </div>
+
+    </section>
+    <div id="container">
+        <div>
+            <form action="/?_method=patch" method="post">
+                <div id="change">
+                    <div id="title">
+                        <p>Update a Birthday</p>
+                    </div>
+                    <div>
+                        <label for="nameEdit">Enter Name</label>
+                    </div>
+                    <div>
+                        <input id="nameEdit" placeholder="name for search" type="text" name="name" required>
+                    </div>
+                    <div>
+                        <label for="date_edit">New Birthday</label>
+                    </div>
+                    <div>
+                        <input type="date" name="date" id="dateEdit" required>
+                    </div>
+                    <div>
+                        <button >Update</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div>  
+            <form action="/" method="post">
+                <div id="add_box">
+                    <div id="title">
+                        <p>Add new Birthday</p>
+                    </div>
+                    <div>
+                        <label for="name">Enter Name</label>
+                    </div>
+                    <div>
+                        <input id="name" name="name" placeholder="name" type="text" required>
+                    </div> 
+                    <div>
+                        <label for="date">Enter Birthday</label>
+                    </div>
+                    <div>
+                        <input id="date" name="date" type="date" required>
+                    </div>
+                    <div>
+                        <button>Save</button>
+                    </div> 
+                </div>
+            </form>
+        </div>
+            
+        
+    </div>
+    
+    
+        
+
+    <!-- <a href="/">Remove</a> -->
+</body>
+</html>

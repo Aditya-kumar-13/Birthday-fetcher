@@ -1,0 +1,192 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgba(62, 12, 111, 0.816);
+    color: rgb(235, 235, 235);
+}
+#nav{
+    background-color:gray;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#searchBar{
+    margin-left: 30%;
+    width:100%;
+    max-width: 250px;
+    min-width: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+}
+#searchBar input{
+    background: transparent;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding-left: 15px;
+    font-size: 15px;
+    color: white;
+}
+#searchBar button img{
+    height: 30px;
+}
+#searchBar button{
+    border: 0;
+    border-radius: 50%;
+}
+#options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 400px;
+}
+#nav a{
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: 0.2s;
+}
+#nav a:hover{
+    background-color: yellowgreen;
+}
+
+
+#close{
+background-color:rgb(226, 226, 37);
+height: 30px;
+padding:5px 0px 0px 5px; 
+margin: auto 0;
+color: red;
+}
+#container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#change div{
+    font-family:monospace;
+    font-size: 15px;
+}
+#title{
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.4rem;
+}
+#change #title p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.4rem;
+}
+#change,#add_box{
+    padding: 30px 0 30px 30px;
+    background-color: rgb(113, 81, 161);
+    width:300px;
+    margin: 70px 30px 10px 50px;
+}
+#info{
+    background-color: rgb(113, 81, 161);
+    padding: 30px 0 30px 30px;
+    margin-left: -30px;
+}
+#homeText img{
+    width: 300px;
+}
+#change span img{
+    width: 80%;
+}
+#error{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: medium;
+}
+#change div,#add_box div{
+    margin-top: 12px;
+}
+#nameEdit, #name{
+    width: 200px;
+    height: 40px;
+    border-radius: 16px;
+    font-size: 15px;
+    padding-left: 10px;
+    border:none;
+    outline: none;
+    transition: 0.2s;
+}
+#dateEdit:hover,#nameEdit:hover,#date:hover,#name:hover{
+    transform:scale(1.05)
+}
+#dateEdit, #date{
+    width: 190px;
+    height: 40px;
+    border-radius: 16px;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border:none;
+    outline: none;
+    transition: 0.2s;
+}
+#change button,#add_box button{
+    width: 100px;
+    height: 33px;
+    border-radius: 15px;
+    background-color: rgb(10, 147, 162);
+    margin-top: 13px;
+    border:none;
+    outline: none;
+    font-size: 15px;
+    transition: 0.2s;
+}
+#change button:hover,#add_box button:hover{
+    background-color: rgb(188, 214, 42);
+    transform: scale(1.05);
+}
+
+
+@media(max-width:800px){
+    #container{
+        flex-direction: column;
+    }
+    #add_box{
+        margin: 70px 0px 30px 50px;
+    }
+}
+@media(min-width:700px){
+    #options{
+        margin-right: 30px;
+    }
+}
+@media(max-width:550px){
+    #searchBar{
+        margin-left:10%;
+        width: 70%;
+    }
+}
+@media(max-width:415px){
+    #change ,#add_box{
+        width: 250px;
+        margin: 40px 0px 40px 30px;
+        padding: 30px 0px 30px 20px;
+    }
+    #options span a{
+        font-size: 13px;
+    }
+}
+@media(max-width:345px){
+    #searchBar input{
+        font-size: 13px;
+    }
+}
+@media(max-width:320px){
+    #options span:nth-of-type(1){
+        display: none;
+    }
+    #change ,#add_box{
+        width: 230px;
+    }
+}
